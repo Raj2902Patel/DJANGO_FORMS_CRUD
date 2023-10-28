@@ -1,0 +1,27 @@
+<h2 align="center">Database</h2>
+
+    <table align="center" border="2">
+        <tr>
+            <th align="center">Name</th>
+            <th align="center">Roll</th>
+            <th align="center">Actions</th>
+        </tr>
+
+        {% for i in data_form %}
+        <tr>
+            <td align="center">{{i.name}}</td>
+            <td align="center">{{i.roll}}</td>
+            <td>
+                <a href="{% url 'single' i.id %}">
+                    Show
+                </a>
+                <a href="{% url 'delete' i.id %}">
+                    Delete
+                </a>
+                <a href="{% url 'edit' i.id %}">
+                    Edit
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>

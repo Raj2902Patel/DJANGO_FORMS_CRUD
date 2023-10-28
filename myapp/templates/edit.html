@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Edit Book Details </title>
+</head>
+<body>
+	<h1> Edit Page</h1>
+    <form method='post'> {% csrf_token %}
+    {{ form.as_p }}
+    <button> Submit</button>
+    </form>
+</body>
+</html>
